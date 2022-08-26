@@ -10,6 +10,8 @@ class searchController extends Controller
 {
     public function search(Request $req)
     {
+        //search your data reffrence id base
+
         $valid= Validator::make($req->all(),[
             'id'=>'required'
            
