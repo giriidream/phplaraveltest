@@ -51,7 +51,7 @@ class CreatePdfController extends Controller
             $fileName2 = "uploads/$partner_name/$year/$monthdate/$currentdate/$partner_name-$dt.pdf";
             if(!is_dir($path)){
             mkdir($path,0777,true);
-          }
+            }
             $pdf = PDF::loadView($bladefile,$data1);
             $pdf->save(public_path().'/'.$fileName2);
             //  return $finalurl="http://localhost/curdprojects/public/$fileName2";
@@ -60,14 +60,6 @@ class CreatePdfController extends Controller
                 'message'=>"saved"
 
             ], 200);        
-        }
-       
-        // $products = DB::table("PDF")->get();
-        // view()->share('PDF',$products);       
-        //       if($request->has('download')){
-        //         $pdf = PDF::loadView('testPDF');
-        //         return $pdf->download('tutsmake.pdf');
-        //   }
-        // return view('pdf_view',['PDF'=>$products]);
+        }   
     }
 }
