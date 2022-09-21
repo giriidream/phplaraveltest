@@ -6,7 +6,8 @@ use App\Http\Controllers\ApiController;
 use App\Http\Controllers\DeleteData;
 use App\Http\Controllers\searchController;
 use App\Http\Controllers\Updatecontroller;
-
+use App\Http\Controllers\KeyController;
+use App\Http\Controllers\CreatePdfController;
 
 
 /*
@@ -28,4 +29,14 @@ Route::post("create",[ApiController::class,'create']);
 Route::post("update",[Updatecontroller::class,'update']);
 Route::post("delete",[DeleteData::class,'delete']);
 Route::post("search",[searchController::class,'search']);
+Route::post("checkid",[ApiController::class,'checkid']);
+Route::post("savedata",[KeyController::class,'savedata']);
+Route::post("finddata",[ApiController::class,'finddata']);
+Route::post("Savadata",[Save::class,'Savadata']);
+Route::post("insert",[ApiController::class,'insert']);
+Route::post("SendOtp",[KeyController::class,'SendOtp']);
+Route::post('pdfForm',[CreatePdfController::class,'pdfForm']);
+
+
+
 //Route::post("validdata",[ApiController::class,'validdata']);
